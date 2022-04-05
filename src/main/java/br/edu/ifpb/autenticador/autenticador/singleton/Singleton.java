@@ -11,6 +11,12 @@ public final class Singleton {
     public List<User> users;
 
     private Singleton(List<User> users) {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException ex){
+            ex.printStackTrace();
+        }
+
         this.users = users;
     }
 

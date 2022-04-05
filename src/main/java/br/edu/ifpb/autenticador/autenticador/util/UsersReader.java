@@ -19,26 +19,14 @@ public class UsersReader {
 
     private UsersReader() {}
 
-
+    private static final String JSON_FILE = "users.json";
 
     public static List<User> loadUsersFromJson() throws URISyntaxException, IOException {
-        Singleton singleton;
-        return singleton
-    }
-
-    Thread threadFoo = new Thread(new ThreadFoo());
-
-    static class ThreadFoo implements Runnable {
-        private static final String JSON_FILE = "users.json";
-
-        @SneakyThrows
-        @Override
-        public void run() {
-            ObjectMapper objectMapper = new ObjectMapper();
-            User[] users = objectMapper.readValue(new File(ClassLoader.getSystemResource(JSON_FILE).toURI()), User[].class);
-            Singleton singleton = Singleton.getInstance(asList(users));
-            System.out.println(singleton.users);
-        }
+        ObjectMapper objectMapper = new ObjectMapper();
+        User[] users = objectMapper.readValue(new File(ClassLoader.getSystemResource(JSON_FILE).toURI()), User[].class);
+        Singleton singleton = Singleton.getInstance(asList(users));
+        return singleton.users;
     }
 }
+
 
