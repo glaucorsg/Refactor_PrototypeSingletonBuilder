@@ -9,12 +9,14 @@ public abstract class Padrao {
     public Permissions permission;
 
     public Padrao() {
+        this.permission = new Permissions();
         permission.setAdminPermission(false);
         permission.setDeletePermission(false);
         permission.setListPermission(false);
         permission.setInsertPermission(false);
         permission.setUpdatePermission(false);
     }
+
 
     public abstract Padrao clone();
 

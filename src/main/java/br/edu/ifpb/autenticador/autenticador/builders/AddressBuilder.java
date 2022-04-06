@@ -7,67 +7,67 @@ import br.edu.ifpb.autenticador.autenticador.domain.State;
 
 public class AddressBuilder implements Builder{
 
-    private Address rua;
-    private Address numero;
-    private Address bairro;
+    private String rua;
+    private String numero;
+    private String bairro;
     private Address address;
 
-    private Country pais;
+    private String pais;
     private Country countryClass;
 
-    private State estado;
-    private State country;
+    private String estado;
+    private Country country;
     private State stateClass;
 
-    private City cidade;
-    private City state;
+    private String cidade;
+    private State state;
     private City city;
 
 
     @Override
-    public AddressBuilder setStreet(Address rua) {
+    public AddressBuilder setStreet(String rua) {
         this.rua = rua;
         return this;
     }
 
     @Override
-    public AddressBuilder setNumber(Address numero) {
+    public AddressBuilder setNumber(String numero) {
         this.numero = numero;
         return this;
     }
 
     @Override
-    public AddressBuilder setNeighborhood(Address bairro) {
+    public AddressBuilder setNeighborhood(String bairro) {
         this.bairro = bairro;
         return this;
     }
 
     @Override
-    public AddressBuilder setName(Country pais) {
+    public AddressBuilder setName(String pais) {
         this.pais = pais;
         return this;
     }
 
     @Override
-    public AddressBuilder setName(State estado) {
+    public AddressBuilder setNameEstado(String estado) {
         this.estado = estado;
         return this;
     }
 
     @Override
-    public AddressBuilder setCountry(State country) {
+    public AddressBuilder setCountry(Country country) {
         this.country = country;
         return this;
     }
 
     @Override
-    public AddressBuilder setName(City cidade) {
+    public AddressBuilder setNameCidade(String cidade) {
         this.cidade = cidade;
         return this;
     }
 
     @Override
-    public AddressBuilder setState(City state) {
+    public AddressBuilder setState(State state) {
         this.state = state;
         return this;
     }

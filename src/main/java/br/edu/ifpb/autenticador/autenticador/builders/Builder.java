@@ -7,17 +7,17 @@ import br.edu.ifpb.autenticador.autenticador.domain.State;
 
 public interface Builder {
 
-    Builder setStreet(Address rua);
-    Builder setNumber(Address numero);
-    Builder setNeighborhood(Address bairro);
+    Builder setStreet(String rua);
+    Builder setNumber(String numero);
+    Builder setNeighborhood(String bairro);
 
-    Builder setName(Country pais);
+    Builder setName(String pais);
 
-    Builder setName(State estado);
-    Builder setCountry(State country);
+    Builder setNameEstado(String estado);
+    Builder setCountry(Country country);
 
-    Builder setName(City cidade);
-    Builder setState(City state);
+    Builder setNameCidade(String cidade);
+    Builder setState(State state);
     Builder setCity(City city);
 
 }
